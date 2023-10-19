@@ -2,12 +2,14 @@ package org.mvc2;
 
 public class Sword implements Weapon {
 
-    public void initMethod(){
+    public void initMethod() {
         System.out.println("Call init Method");
     }
-    public void destroyMethod(){
+
+    public void destroyMethod() {
         System.out.println("Call destroy method");
     }
+
     @Override
     public String getType() {
         return "sword";

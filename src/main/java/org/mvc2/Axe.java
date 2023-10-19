@@ -1,4 +1,5 @@
 package org.mvc2;
+
 import org.springframework.stereotype.Component;
 
 @Component
