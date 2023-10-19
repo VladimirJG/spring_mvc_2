@@ -1,5 +1,8 @@
 package org.mvc2;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Sword implements Weapon {
 
     public void initMethod() {
