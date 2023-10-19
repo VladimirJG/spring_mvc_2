@@ -16,8 +16,13 @@ public class TestSpring {
         player.attack();
         context.close();*/ // 2 вариант
 
-        Game game = context.getBean(Game.class);
+        /*Game game = context.getBean(Game.class);
         game.playerAttacking();
+        context.close();*/  //3 вариант
+
+        Player player = context.getBean(Player.class);
+        System.out.println(player.getHealth());
+
         context.close();
     }
 }
