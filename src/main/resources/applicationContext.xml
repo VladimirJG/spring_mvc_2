@@ -7,30 +7,6 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="classpath:player.properties"/>
-
-    <bean id="testBean" class="org.mvc2.TestBean">
-        <constructor-arg value="Vladimir"/>
-    </bean>
-
-    <bean id="weaponBean" class="org.mvc2.Axe">
-    </bean>
-    <bean id="swordBean" class="org.mvc2.Sword"
-          init-method="initMethod"
-          destroy-method="destroyMethod">
-    </bean>
-
-    <bean id="axeBean" class="org.mvc2.Axe"
-          scope="prototype">
-    </bean>
-
-
-    <bean id="playerBean" class="org.mvc2.Player">
-        <!-- <constructor-arg ref="weaponBean"/>--> <!--1 вариант-->
-        <!-- <property name="weapon" ref="weaponBean"/>-->  <!--2 вариант-->
-        <property name="weapon" ref="weaponBean"/>
-        <!--  <property name="health" value="1000"/>--> <!--3 вариант-->
-        <property name="health" value="${playerBean.health}"/>
-    </bean>
+   <context:component-scan base-package="org.mvc2"/>
 
 </beans>

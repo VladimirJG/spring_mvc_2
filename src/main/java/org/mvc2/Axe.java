@@ -1,5 +1,7 @@
 package org.mvc2;
+import org.springframework.stereotype.Component;
 
+@Component("weaponBean")
 public class Axe implements Weapon{
     @Override
     public String getType() {
