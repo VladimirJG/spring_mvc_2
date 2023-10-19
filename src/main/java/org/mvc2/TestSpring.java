@@ -24,7 +24,7 @@ public class TestSpring {
         System.out.println(player.getHealth());
         context.close();*/ //4 вариант
 
-        Player player1 = context.getBean(Player.class);
+        /*Player player1 = context.getBean(Player.class);
         Player player2 = context.getBean(Player.class);
 
         System.out.println(player1.hashCode());
@@ -32,6 +32,10 @@ public class TestSpring {
 
         System.out.println(player1 == player2);
 
+        context.close();*/ //5 вариант/часть
+
+        Player player = context.getBean(Player.class);
+        player.attack();
         context.close();
     }
 }

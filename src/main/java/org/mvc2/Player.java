@@ -17,7 +17,7 @@ public class Player {
     }
 
     @Autowired
-    public Player(@Qualifier("axe") Weapon weapon) {
+    public Player(@Qualifier("sword") Weapon weapon) {
         this.weapon = weapon;
     }
 
