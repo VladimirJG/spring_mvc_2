@@ -12,8 +12,12 @@ public class TestSpring {
 
         context.close();*/ // 1 вариант
 
-        Player player = context.getBean(Player.class);
+       /* Player player = context.getBean(Player.class);
         player.attack();
+        context.close();*/ // 2 вариант
+
+        Game game = context.getBean(Game.class);
+        game.playerAttacking();
         context.close();
     }
 }
