@@ -36,6 +36,7 @@ public class TestSpring {
 
         Player player = context.getBean(Player.class);
         player.attack();
+        System.out.println(player.getHealth());
         context.close();
     }
 }
